@@ -27,9 +27,9 @@ def Roll():
 
 
 # --------------------                # roll until a 7 is obtained
-def Play(point):  #  - then return a 0
-    # --------------------                # or the point is made
-    #  - then return a 1
+def Play(point):                      #  - then return a 0
+    # --------------------            # or the point is made
+                                      #  - then return a 1
     condition = True
     while (condition == True):
         sum = Roll()
@@ -54,7 +54,6 @@ for i in range(0, N):  # do N Monte Carlo replications
         result = Play(point)
 
     wins += result
-#EndFor
 
 p = float(wins) / float(N)  # estimate the probability of winning
 q = 1 - p  # estimate the probability of losing
